@@ -22,3 +22,5 @@ Proyek ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/M
 ---
 
 Semoga proyek ini bermanfaat dan semakin menarik! Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau saran. Terima kasih! 😊.
+
+email: `anggadwisunarto3@gmail.com`
