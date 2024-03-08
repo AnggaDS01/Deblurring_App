@@ -47,7 +47,7 @@ class FileUpload(object):
                     input_low_resolution = tf.keras.Input(shape=low_resolution_shape)
                     autoencoder = Deblurr_Autoencoder(inputs=input_low_resolution)
 
-                    autoencoder.load_weights('Deblurr_App/Deblurr model/Autoencoder model/checkpoint').expect_partial()
+                    autoencoder.load_weights('Deblurr model/Autoencoder model/checkpoint').expect_partial()
 
                     width_ori, height_ori, padded_img = self.pad_image(uploaded_file, recons_kernel)
                     cols, rows = tuple(map(lambda x: int(x / recons_kernel), padded_img.size))
