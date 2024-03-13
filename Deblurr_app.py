@@ -41,7 +41,7 @@ class FileUpload(object):
                 st.error("File yang Anda unggah tidak termasuk dalam jenis file yang diizinkan.")
             else:
                 col1.image(uploaded_file, caption='Gambar Blur')
-                if col1.button('Rekonstruksi'):
+                if col1.button('Restorasi'):
                     recons_kernel = 200
                     low_resolution_shape = (recons_kernel, recons_kernel, 3)
                     input_low_resolution = tf.keras.Input(shape=low_resolution_shape)
@@ -60,13 +60,13 @@ class FileUpload(object):
                     pil_img.save(buf, format="PNG")
                     byte_im = buf.getvalue()
 
-                    col2.image(pil_img, caption='Gambar rekonstruksi')
+                    col2.image(pil_img, caption='Gambar restorasi')
 
                     # Tambahkan tombol unduh
                     col2.download_button(
                         label="Unduh Gambar",
                         data=byte_im,
-                        file_name="reconstructed_image.png",
+                        file_name="restored_image.png",
                         mime="image/png",
                     )
     def pad_image(self, image_path, recons_kernel=150):
