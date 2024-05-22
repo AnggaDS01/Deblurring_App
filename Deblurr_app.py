@@ -41,7 +41,7 @@ class FileUpload(object):
                 st.error("File yang Anda unggah tidak termasuk dalam jenis file yang diizinkan.")
             else:
                 col1.image(uploaded_file, caption='Gambar Blur')
-                if col1.button('Restorasi'):
+                if col1.button('Deblurring'):
                     recons_kernel = 200
                     low_resolution_shape = (recons_kernel, recons_kernel, 3)
                     input_low_resolution = tf.keras.Input(shape=low_resolution_shape)
