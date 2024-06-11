@@ -60,7 +60,7 @@ class FileUpload(object):
                     pil_img.save(buf, format="PNG")
                     byte_im = buf.getvalue()
 
-                    col2.image(pil_img, caption='Gambar restorasi')
+                    col2.image(pil_img, caption='Gambar Hasil Deblurring')
 
                     # Tambahkan tombol unduh
                     col2.download_button(
